@@ -53,34 +53,71 @@
                         </div>
 
                         <div class="row mb-3 mt-3">
-                            <label  class="col-sm-2 col-form-label">Opções:</label>
+                            <label  class="col-sm-2 col-form-label">Turno:</label>
                             <div class="col-sm-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkBoxPromotion">
-                                    <label class="form-check-label" for="checkBoxPromotion">
-                                        Promoção
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioMorning">
+                                    <label class="form-check-label" for="flexRadioMorning">
+                                        Manhã
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkBoxNewProduct">
-                                    <label class="form-check-label" for="checkBoxNewProduct">
-                                        Lançamento
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioAfternoon">
+                                    <label class="form-check-label" for="flexRadioAfternoon">
+                                        Tarde
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioEvening">
+                                    <label class="form-check-label" for="flexRadioEvening">
+                                        Noite
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3 mt-3">
                             <div class="col-sm-4">
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
         </section>
+
+        <hr>
+
+        <section>
+            <div class="display-6">
+                Estudantes cadastrados:
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table class="table" id="studentsTable">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col" class="d-none d-md-table-cell">Email</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Curso</th>
+                            <th scope="col" class="d-none d-md-table-cell">Turno</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+        </section>
     </main>
+
+    <footer class="bg-secondary text-center text-white fixed-bottom">
+        @Sistemas P&D
+    </footer>
 
 </body>
 
