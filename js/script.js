@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#inputPhone  ').mask('(00) 00000-0000');
+    $('#inputPhone').mask('(00) 00000-0000');
   });
 
   var students = [
@@ -7,7 +7,7 @@ $(document).ready(function(){
       id: 1,
       name: "André",
       email: "andre@gmail.com",
-      phone: "11999999999",
+      phone: "(11) 99999-9999",
       course: 1,
       morning: true,
       afternoon: false,
@@ -17,7 +17,7 @@ $(document).ready(function(){
       id: 2,
       name: "Lucas",
       email: "lucas@gmail.com",
-      phone: "11999999999",
+      phone: "(11) 99999-9999",
       course: 2,
       morning: false,
       afternoon: true,
@@ -27,7 +27,7 @@ $(document).ready(function(){
       id: 3,
       name: "Ferreira",
       email: "ferreira@gmail.com",
-      phone: "11999999999",
+      phone: "(11) 99999-9999",
       course: 3,
       morning: false,
       afternoon: false,
@@ -35,7 +35,7 @@ $(document).ready(function(){
     },
   ];
 
-  var shifts = [
+  var courses = [
     { id: 1, name: "Java"},
     { id: 2, name: "Angular"},
     { id: 3, name: "Spring"}
@@ -80,27 +80,44 @@ $(document).ready(function(){
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(stud.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     var phoneNode = document.createTextNode(stud.phone);
     newRow.insertCell().appendChild(phoneNode);
 
-    var courseNode = document.createTextNode(stud.course);
-    newRow.insertCell().appendChild(courseNode);
+    var course = "";
+    if (stud.course == 1) {
+      course = "<span>Java</span>"
+    }
 
+    if (stud.course == 2) {
+      course = "<span>Angular</span>"
+    }
+
+    if (stud.course == 3) {
+      course = "<span>Spring</span>"
+    }
+    
+    newRow.insertCell().innerHTML = course;
+
+    
+  
     var shifts = "";
     if (stud.morning) {
-      options = "<span>Morning</span>";
+      shifts = "<span>Manhã</span>";
     }
 
     if (stud.afternoon) {
-      options = "<span>Afternoon</span>";
+      shifts = "<span>Tarde</span>";
     }
 
     if (stud.night) {
-      options = "<span>Night</span>";
+      shifts = "<span>Noite</span>";
     }
 
-    cell = newRow.insertCell();
-    cell.innerHTML = options; 
+    var cell = newRow.insertCell();
+    cell.className="d-none d-md-table-cell"
+    cell.innerHTML = shifts; 
   }
