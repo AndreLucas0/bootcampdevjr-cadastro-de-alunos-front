@@ -88,5 +88,19 @@ $(document).ready(function(){
     var courseNode = document.createTextNode(stud.course);
     newRow.insertCell().appendChild(courseNode);
 
-    
+    var shifts = "";
+    if (stud.morning) {
+      options = "<span>Morning</span>";
+    }
+
+    if (stud.afternoon) {
+      options = "<span>Afternoon</span>";
+    }
+
+    if (stud.night) {
+      options = "<span>Night</span>";
+    }
+
+    cell = newRow.insertCell();
+    cell.innerHTML = options; 
   }
