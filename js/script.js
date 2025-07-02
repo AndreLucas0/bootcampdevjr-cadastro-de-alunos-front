@@ -67,3 +67,26 @@ $(document).ready(function(){
 
     document.getElementById("formStudent").reset();
   }
+
+  function addNewRow(stud) {
+    var table = document.getElementById("studentsTable");
+
+    var newRow = table.insertRow();
+
+    var idNode = document.createTextNode(stud.id);
+    newRow.insertCell().appendChild(idNode);
+
+    var nameNode = document.createTextNode(stud.name);
+    newRow.insertCell().appendChild(nameNode);
+
+    var emailNode = document.createTextNode(stud.email);
+    newRow.insertCell().appendChild(emailNode);
+
+    var phoneNode = document.createTextNode(stud.phone);
+    newRow.insertCell().appendChild(phoneNode);
+
+    var courseNode = document.createTextNode(stud.course);
+    newRow.insertCell().appendChild(courseNode);
+
+    
+  }
