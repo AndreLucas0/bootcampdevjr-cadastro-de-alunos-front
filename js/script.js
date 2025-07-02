@@ -57,8 +57,13 @@ $(document).ready(function(){
       email: document.getElementById("inputEmail").value,
       phone: document.getElementById("inputPhone").value,
       course: document.getElementById("selectCourse").value,
-      morning: document.getElementById("")
-      afternoon:
-      night: 
+      morning: document.getElementById("flexRadioMorning").checked,
+      afternoon: document.getElementById("flexRadioAfternoon").checked,
+      night: document.getElementById("flexRadioNight").checked
     };
+
+    addNewRow(stud);
+    students.push(stud);
+
+    document.getElementById("formStudent").reset();
   }
